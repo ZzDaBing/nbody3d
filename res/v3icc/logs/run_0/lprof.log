@@ -1,0 +1,44 @@
+
+* Info: Selecting the 'perf-low-ppn' engine for node knl07
+
+* Info: Process launched (host knl07, process 614695)
+[1mTotal memory size:[0m 393216 B, 384 KiB, 0 MiB
+
+[1m Step    Time, s Interact/s  GFLOP/s[0m
+    0  1.766e+00  1.520e+08      4.6 *
+    1  1.522e+00  1.764e+08      5.3 *
+    2  6.626e-01  4.051e+08     12.2 *
+    3  6.389e-01  4.201e+08     12.6 
+    4  5.281e-01  5.083e+08     15.2 
+    5  2.990e-01  8.978e+08     26.9 
+    6  5.249e-01  5.114e+08     15.3 
+    7  6.479e-01  4.143e+08     12.4 
+    8  6.450e-01  4.162e+08     12.5 
+    9  6.500e-01  4.130e+08     12.4 
+-----------------------------------------------------
+[1mAverage performance:      [42m      15.3 +- 4.9 GFLOP/s[0m
+Average rdtsc = 811429382
+-----------------------------------------------------
+
+* Info: Process finished (host knl07, process 614695)
+* Info: Dumping samples (host knl07, process 614695)
+* Info: Dumping source info for callchain nodes (host knl07, process 614695)
+* Info: Building/writing metadata (host knl07)
+* Info: Finished collect step (host knl07, process 614695)
+
+Your experiment path is /users/user2208/nbodyssh/3/../v3icc/tools/lprof_npsu_run_0
+
+To display your profiling results:
+#################################################################################################
+#    LEVEL    |     REPORT     |                            COMMAND                             #
+#################################################################################################
+#  Functions  |  Cluster-wide  |  maqao lprof -df xp=/users/user2208/nbodyssh/3/../v3icc/tools  #
+#  Functions  |  Per-node      |  maqao lprof -df -dn xp=/users/user2208/nbodyssh/3/../v3icc/t  #
+#  Functions  |  Per-process   |  maqao lprof -df -dp xp=/users/user2208/nbodyssh/3/../v3icc/t  #
+#  Functions  |  Per-thread    |  maqao lprof -df -dt xp=/users/user2208/nbodyssh/3/../v3icc/t  #
+#  Loops      |  Cluster-wide  |  maqao lprof -dl xp=/users/user2208/nbodyssh/3/../v3icc/tools  #
+#  Loops      |  Per-node      |  maqao lprof -dl -dn xp=/users/user2208/nbodyssh/3/../v3icc/t  #
+#  Loops      |  Per-process   |  maqao lprof -dl -dp xp=/users/user2208/nbodyssh/3/../v3icc/t  #
+#  Loops      |  Per-thread    |  maqao lprof -dl -dt xp=/users/user2208/nbodyssh/3/../v3icc/t  #
+#################################################################################################
+

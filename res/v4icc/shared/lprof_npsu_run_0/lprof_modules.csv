@@ -1,0 +1,5 @@
+name;time_p;time_s;cpi_ratio;
+/users/user2208/nbodyssh/v4icc/binaries/nbody.i;99.2;8.06;;
+/usr/lib/x86_64-linux-gnu/libc-2.31.so;0.43;0.03;;
+/usr/lib/x86_64-linux-gnu/ld-2.31.so;0.31;0.02;;
+kernel;0.06;0;;

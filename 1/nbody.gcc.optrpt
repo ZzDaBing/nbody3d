@@ -1,0 +1,269 @@
+nbody.c:169:5: optimized:   Inlining fprintf/14 into main/42 (always_inline).
+nbody.c:164:3: optimized:   Inlining printf/15 into main/42 (always_inline).
+nbody.c:163:3: optimized:   Inlining printf/15 into main/42 (always_inline).
+nbody.c:161:3: optimized:   Inlining printf/15 into main/42 (always_inline).
+nbody.c:160:3: optimized:   Inlining printf/15 into main/42 (always_inline).
+nbody.c:144:5: optimized:   Inlining printf/15 into main/42 (always_inline).
+nbody.c:121:3: optimized:   Inlining printf/15 into main/42 (always_inline).
+nbody.c:118:3: optimized:   Inlining printf/15 into main/42 (always_inline).
+nbody.c:93:30: optimized:   Inlining atoll/25 into main/42 (always_inline).
+nbody.c:154:27: note: Considering inline candidate rdtsc/39.
+nbody.c:154:27: optimized:  Inlining rdtsc/39 into main/42.
+nbody.c:153:7: note: Considering inline candidate move_particles/41.
+nbody.c:153:7: missed:   will not early inline: main/42->move_particles/41, growth 74 exceeds --param early-inlining-insns
+nbody.c:151:29: note: Considering inline candidate rdtsc/39.
+nbody.c:151:29: optimized:  Inlining rdtsc/39 into main/42.
+nbody.c:150:5: note: Considering inline candidate init/40.
+nbody.c:150:5: missed:   will not early inline: main/42->init/40, growth 44 exceeds --param early-inlining-insns
+nbody.c:128:5: note: Considering inline candidate move_particles/41.
+nbody.c:128:5: missed:   will not early inline: main/42->move_particles/41, growth 74 exceeds --param early-inlining-insns
+nbody.c:113:3: note: Considering inline candidate init/40.
+nbody.c:113:3: missed:   will not early inline: main/42->init/40, growth 44 exceeds --param early-inlining-insns
+nbody.c:179:3: missed:   not inlinable: main/42 -> free/52, function body not available
+nbody.c:178:3: missed:   not inlinable: main/42 -> free/52, function body not available
+nbody.c:177:3: missed:   not inlinable: main/42 -> free/52, function body not available
+nbody.c:176:3: missed:   not inlinable: main/42 -> free/52, function body not available
+nbody.c:175:3: missed:   not inlinable: main/42 -> free/52, function body not available
+nbody.c:174:3: missed:   not inlinable: main/42 -> free/52, function body not available
+nbody.c:171:3: missed:   not inlinable: main/42 -> fclose/51, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:100:10: missed:   not inlinable: main/42 -> __fprintf_chk/55, function body not available
+nbody.c:167:13: missed:   not inlinable: main/42 -> fopen/50, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:107:10: missed:   not inlinable: main/42 -> __printf_chk/54, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:107:10: missed:   not inlinable: main/42 -> __printf_chk/54, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:107:10: missed:   not inlinable: main/42 -> __printf_chk/54, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:107:10: missed:   not inlinable: main/42 -> __printf_chk/54, function body not available
+nbody.c:158:11: missed:   not inlinable: main/42 -> sqrt/49, function body not available
+nbody.c:153:7: missed:   not inlinable: main/42 -> move_particles/41, --param max-inline-insns-auto limit reached
+nbody.c:150:5: missed:   not inlinable: main/42 -> init/40, --param max-inline-insns-auto limit reached
+nbody.c:146:5: missed:   not inlinable: main/42 -> fflush/47, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:107:10: missed:   not inlinable: main/42 -> __printf_chk/54, function body not available
+nbody.c:130:21: missed:   not inlinable: main/42 -> omp_get_wtime/48, function body not available
+nbody.c:128:5: missed:   not inlinable: main/42 -> move_particles/41, --param max-inline-insns-auto limit reached
+nbody.c:126:23: missed:   not inlinable: main/42 -> omp_get_wtime/48, function body not available
+nbody.c:121:92: missed:   not inlinable: main/42 -> fflush/47, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:107:10: missed:   not inlinable: main/42 -> __printf_chk/54, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:107:10: missed:   not inlinable: main/42 -> __printf_chk/54, function body not available
+nbody.c:113:3: missed:   not inlinable: main/42 -> init/40, --param max-inline-insns-auto limit reached
+nbody.c:110:10: missed:   not inlinable: main/42 -> malloc/45, function body not available
+nbody.c:109:10: missed:   not inlinable: main/42 -> malloc/45, function body not available
+nbody.c:108:10: missed:   not inlinable: main/42 -> malloc/45, function body not available
+nbody.c:107:9: missed:   not inlinable: main/42 -> malloc/45, function body not available
+nbody.c:106:9: missed:   not inlinable: main/42 -> malloc/45, function body not available
+nbody.c:105:9: missed:   not inlinable: main/42 -> malloc/45, function body not available
+/usr/include/stdlib.h:375:10: missed:   not inlinable: main/42 -> strtoll/53, function body not available
+nbody.c:69:32: missed:   not inlinable: move_particles/41 -> pow/44, function body not available
+nbody.c:46:22: missed:   not inlinable: init/40 -> rand/43, function body not available
+nbody.c:45:29: missed:   not inlinable: init/40 -> rand/43, function body not available
+nbody.c:44:22: missed:   not inlinable: init/40 -> rand/43, function body not available
+nbody.c:41:28: missed:   not inlinable: init/40 -> rand/43, function body not available
+nbody.c:40:21: missed:   not inlinable: init/40 -> rand/43, function body not available
+nbody.c:39:28: missed:   not inlinable: init/40 -> rand/43, function body not available
+nbody.c:35:21: missed:   not inlinable: init/40 -> rand/43, function body not available
+nbody.c:34:21: missed:   not inlinable: init/40 -> rand/43, function body not available
+Unit growth for small function inlining: 344->344 (0%)
+
+Inlined 11 calls, eliminated 1 functions
+
+nbody.c:34:21: missed: statement clobbers memory: _1 = rand ();
+nbody.c:31:3: missed: couldn't vectorize loop
+nbody.c:31:3: missed: not vectorized: control flow in loop.
+nbody.c:29:6: note: vectorized 0 loops in function.
+nbody.c:34:21: missed: statement clobbers memory: _1 = rand ();
+nbody.c:34:21: missed: statement clobbers memory: _1 = rand ();
+nbody.c:35:21: missed: statement clobbers memory: _2 = rand ();
+nbody.c:39:28: missed: statement clobbers memory: _3 = rand ();
+nbody.c:40:21: missed: statement clobbers memory: _10 = rand ();
+nbody.c:41:28: missed: statement clobbers memory: _15 = rand ();
+nbody.c:44:22: missed: statement clobbers memory: _21 = rand ();
+nbody.c:45:29: missed: statement clobbers memory: _26 = rand ();
+nbody.c:46:22: missed: statement clobbers memory: _32 = rand ();
+consider run-time aliasing test between *_44 and *_40
+consider run-time aliasing test between *_50 and *_48
+consider run-time aliasing test between *_56 and *_54
+consider run-time aliasing test between *_5 and *_26
+consider run-time aliasing test between *_9 and *_26
+consider run-time aliasing test between *_13 and *_26
+consider run-time aliasing test between *_2 and *_26
+consider run-time aliasing test between *_7 and *_26
+consider run-time aliasing test between *_11 and *_26
+consider run-time aliasing test between *_5 and *_30
+consider run-time aliasing test between *_9 and *_30
+consider run-time aliasing test between *_13 and *_30
+consider run-time aliasing test between *_2 and *_30
+consider run-time aliasing test between *_7 and *_30
+consider run-time aliasing test between *_11 and *_30
+consider run-time aliasing test between *_5 and *_34
+consider run-time aliasing test between *_9 and *_34
+consider run-time aliasing test between *_13 and *_34
+consider run-time aliasing test between *_2 and *_34
+consider run-time aliasing test between *_7 and *_34
+consider run-time aliasing test between *_11 and *_34
+consider run-time aliasing test between *_5 and *_30
+consider run-time aliasing test between *_9 and *_30
+consider run-time aliasing test between *_13 and *_30
+consider run-time aliasing test between *_2 and *_30
+consider run-time aliasing test between *_7 and *_30
+consider run-time aliasing test between *_11 and *_30
+consider run-time aliasing test between *_26 and *_30
+consider run-time aliasing test between *_5 and *_26
+consider run-time aliasing test between *_9 and *_26
+consider run-time aliasing test between *_13 and *_26
+consider run-time aliasing test between *_2 and *_26
+consider run-time aliasing test between *_7 and *_26
+consider run-time aliasing test between *_11 and *_26
+consider run-time aliasing test between *_26 and *_30
+consider run-time aliasing test between *_26 and *_30
+consider run-time aliasing test between *_5 and *_34
+consider run-time aliasing test between *_9 and *_34
+consider run-time aliasing test between *_13 and *_34
+consider run-time aliasing test between *_2 and *_34
+consider run-time aliasing test between *_7 and *_34
+consider run-time aliasing test between *_11 and *_34
+consider run-time aliasing test between *_26 and *_34
+consider run-time aliasing test between *_5 and *_26
+consider run-time aliasing test between *_9 and *_26
+consider run-time aliasing test between *_13 and *_26
+consider run-time aliasing test between *_2 and *_26
+consider run-time aliasing test between *_7 and *_26
+consider run-time aliasing test between *_11 and *_26
+consider run-time aliasing test between *_26 and *_34
+consider run-time aliasing test between *_26 and *_34
+consider run-time aliasing test between *_30 and *_34
+consider run-time aliasing test between *_5 and *_30
+consider run-time aliasing test between *_9 and *_30
+consider run-time aliasing test between *_13 and *_30
+consider run-time aliasing test between *_2 and *_30
+consider run-time aliasing test between *_7 and *_30
+consider run-time aliasing test between *_11 and *_30
+consider run-time aliasing test between *_30 and *_34
+consider run-time aliasing test between *_30 and *_34
+nbody.c:82:5: missed: couldn't vectorize loop
+nbody.c:82:5: missed: number of versioning for alias run-time tests exceeds 10 (--param vect-max-version-for-alias-checks)
+nbody.c:56:3: missed: couldn't vectorize loop
+nbody.c:65:36: missed: runtime alias check not supported for outer loop.
+nbody.c:63:7: optimized: loop vectorized using 64 byte vectors
+nbody.c:51:6: note: vectorized 1 loops in function.
+nbody.c:126:23: missed: statement clobbers memory: start_96 = omp_get_wtime ();
+nbody.c:152:5: missed: couldn't vectorize loop
+nbody.c:153:7: missed: statement clobbers memory: move_particles (p, 9.99999977648258209228515625e-3, iftmp.1_47);
+nbody.c:124:3: missed: couldn't vectorize loop
+nbody.c:124:3: missed: not vectorized: control flow in loop.
+nbody.c:91:5: note: vectorized 0 loops in function.
+nbody.c:126:23: missed: statement clobbers memory: start_96 = omp_get_wtime ();
+nbody.c:153:7: missed: statement clobbers memory: move_particles (p, 9.99999977648258209228515625e-3, iftmp.1_47);
+/usr/include/stdlib.h:375:10: missed: statement clobbers memory: _109 = strtoll (_2, 0B, 10);
+nbody.c:105:9: missed: statement clobbers memory: _4 = malloc (_3);
+nbody.c:106:9: missed: statement clobbers memory: _6 = malloc (_3);
+nbody.c:107:9: missed: statement clobbers memory: _7 = malloc (_3);
+nbody.c:108:10: missed: statement clobbers memory: _8 = malloc (_3);
+nbody.c:109:10: missed: statement clobbers memory: _9 = malloc (_3);
+nbody.c:110:10: missed: statement clobbers memory: _10 = malloc (_3);
+nbody.c:113:3: missed: statement clobbers memory: init (p, iftmp.1_47);
+nbody.c:113:3: note: ***** Re-trying analysis with vector size 32
+nbody.c:113:3: missed: statement clobbers memory: init (p, iftmp.1_47);
+nbody.c:113:3: note: ***** Re-trying analysis with vector size 16
+nbody.c:113:3: missed: statement clobbers memory: init (p, iftmp.1_47);
+nbody.c:113:3: note: SLPing BB part
+nbody.c:113:3: note: ------>vectorizing SLP node starting from: MEM[(struct particle_s *)&p] = _4;
+nbody.c:113:3: note: vect_is_simple_use: operand malloc (_3), type of def: external
+nbody.c:113:3: note: vect_is_simple_use: operand malloc (_3), type of def: external
+nbody.c:113:3: note: vect_is_simple_use: operand malloc (_3), type of def: external
+nbody.c:113:3: note: vect_is_simple_use: operand malloc (_3), type of def: external
+nbody.c:113:3: note: vect_is_simple_use: operand malloc (_3), type of def: external
+nbody.c:113:3: note: vect_is_simple_use: operand malloc (_3), type of def: external
+nbody.c:113:3: note: transform store. ncopies = 1
+nbody.c:113:3: note: add new stmt: vect_cst__74 = _76;
+nbody.c:113:3: note: created new init_stmt: vect_cst__74 = _76;
+nbody.c:113:3: note: add new stmt: vect_cst__43 = _48;
+nbody.c:113:3: note: created new init_stmt: vect_cst__43 = _48;
+nbody.c:113:3: note: add new stmt: vect_cst__153 = _1;
+nbody.c:113:3: note: created new init_stmt: vect_cst__153 = _1;
+nbody.c:113:3: note: create vector_type-pointer variable to type: vector(2) long unsigned int  vectorizing a pointer ref: MEM[(struct particle_s *)&p]
+nbody.c:113:3: note: created &MEM[(struct particle_s *)&p]
+nbody.c:113:3: note: add new stmt: MEM[(struct particle_s *)&p] = vect_cst__153;
+nbody.c:113:3: note: add new stmt: _23 = &MEM[(struct particle_s *)&p] + 16;
+nbody.c:113:3: note: add new stmt: MEM[(struct particle_s *)_23] = vect_cst__43;
+nbody.c:113:3: note: add new stmt: _30 = _23 + 16;
+nbody.c:113:3: note: add new stmt: MEM[(struct particle_s *)_30] = vect_cst__74;
+nbody.c:113:3: note: vectorizing stmts using SLP.
+nbody.c:113:3: optimized: basic block part vectorized using 16 byte vectors
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:107:10: missed: statement clobbers memory: __printf_chk (1, "\n\x1b[1mTotal memory size:\x1b[0m %llu B, %llu KiB, %llu MiB\n\n", s_67, _12, _11);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:107:10: missed: statement clobbers memory: __printf_chk (1, "\x1b[1m%5s %10s %10s %8s\x1b[0m\n", "Step", "Time, s", "Interact/s", "GFLOP/s");
+nbody.c:121:92: missed: statement clobbers memory: fflush (stdout.2_13);
+nbody.c:140:20: note: basic block vectorized
+nbody.c:126:23: missed: statement clobbers memory: start_96 = omp_get_wtime ();
+nbody.c:128:5: missed: statement clobbers memory: move_particles (p, 9.99999977648258209228515625e-3, iftmp.1_47);
+nbody.c:128:5: note: ***** Re-trying analysis with vector size 32
+nbody.c:128:5: missed: statement clobbers memory: move_particles (p, 9.99999977648258209228515625e-3, iftmp.1_47);
+nbody.c:128:5: note: ***** Re-trying analysis with vector size 16
+nbody.c:128:5: missed: statement clobbers memory: move_particles (p, 9.99999977648258209228515625e-3, iftmp.1_47);
+nbody.c:128:5: note: SLPing BB part
+nbody.c:128:5: note: ------>vectorizing SLP node starting from: MEM[(struct particle_s *)&p] = _4;
+nbody.c:128:5: note: vect_is_simple_use: operand malloc (_3), type of def: external
+nbody.c:128:5: note: vect_is_simple_use: operand malloc (_3), type of def: external
+nbody.c:128:5: note: vect_is_simple_use: operand malloc (_3), type of def: external
+nbody.c:128:5: note: vect_is_simple_use: operand malloc (_3), type of def: external
+nbody.c:128:5: note: vect_is_simple_use: operand malloc (_3), type of def: external
+nbody.c:128:5: note: vect_is_simple_use: operand malloc (_3), type of def: external
+nbody.c:128:5: note: transform store. ncopies = 1
+nbody.c:128:5: note: created new init_stmt: vect_cst__25 = _24;
+nbody.c:128:5: note: created new init_stmt: vect_cst__108 = _32;
+nbody.c:128:5: note: created new init_stmt: vect_cst__155 = _154;
+nbody.c:128:5: note: create vector_type-pointer variable to type: vector(2) long unsigned int  vectorizing a pointer ref: MEM[(struct particle_s *)&p]
+nbody.c:128:5: note: created &MEM[(struct particle_s *)&p]
+nbody.c:128:5: note: add new stmt: MEM[(struct particle_s *)&p] = vect_cst__155;
+nbody.c:128:5: note: add new stmt: _157 = &MEM[(struct particle_s *)&p] + 16;
+nbody.c:128:5: note: add new stmt: MEM[(struct particle_s *)_157] = vect_cst__108;
+nbody.c:128:5: note: add new stmt: _159 = _157 + 16;
+nbody.c:128:5: note: add new stmt: MEM[(struct particle_s *)_159] = vect_cst__25;
+nbody.c:128:5: note: vectorizing stmts using SLP.
+nbody.c:128:5: optimized: basic block part vectorized using 16 byte vectors
+nbody.c:130:21: missed: statement clobbers memory: end_99 = omp_get_wtime ();
+nbody.c:138:8: note: basic block vectorized
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:107:10: missed: statement clobbers memory: __printf_chk (1, "%5llu %10.3e %10.3e %8.1f %s\n", i_149, _135, _34, _133, "");
+nbody.c:146:5: missed: statement clobbers memory: fflush (stdout.4_35);
+nbody.c:150:5: missed: statement clobbers memory: init (p, iftmp.1_47);
+nbody.c:24:5: missed: statement clobbers memory: __asm__ __volatile__("rdtsc" : "=a" a_110, "=d" d_111);
+nbody.c:153:7: missed: statement clobbers memory: move_particles (p, 9.99999977648258209228515625e-3, iftmp.1_47);
+nbody.c:153:7: note: ***** Re-trying analysis with vector size 32
+nbody.c:153:7: missed: statement clobbers memory: move_particles (p, 9.99999977648258209228515625e-3, iftmp.1_47);
+nbody.c:153:7: note: ***** Re-trying analysis with vector size 16
+nbody.c:153:7: missed: statement clobbers memory: move_particles (p, 9.99999977648258209228515625e-3, iftmp.1_47);
+nbody.c:153:7: note: SLPing BB part
+nbody.c:153:7: note: ------>vectorizing SLP node starting from: MEM[(struct particle_s *)&p] = _4;
+nbody.c:153:7: note: vect_is_simple_use: operand malloc (_3), type of def: external
+nbody.c:153:7: note: vect_is_simple_use: operand malloc (_3), type of def: external
+nbody.c:153:7: note: vect_is_simple_use: operand malloc (_3), type of def: external
+nbody.c:153:7: note: vect_is_simple_use: operand malloc (_3), type of def: external
+nbody.c:153:7: note: vect_is_simple_use: operand malloc (_3), type of def: external
+nbody.c:153:7: note: vect_is_simple_use: operand malloc (_3), type of def: external
+nbody.c:153:7: note: transform store. ncopies = 1
+nbody.c:153:7: note: created new init_stmt: vect_cst__164 = _163;
+nbody.c:153:7: note: created new init_stmt: vect_cst__168 = _167;
+nbody.c:153:7: note: created new init_stmt: vect_cst__172 = _171;
+nbody.c:153:7: note: create vector_type-pointer variable to type: vector(2) long unsigned int  vectorizing a pointer ref: MEM[(struct particle_s *)&p]
+nbody.c:153:7: note: created &MEM[(struct particle_s *)&p]
+nbody.c:153:7: note: add new stmt: MEM[(struct particle_s *)&p] = vect_cst__172;
+nbody.c:153:7: note: add new stmt: _174 = &MEM[(struct particle_s *)&p] + 16;
+nbody.c:153:7: note: add new stmt: MEM[(struct particle_s *)_174] = vect_cst__168;
+nbody.c:153:7: note: add new stmt: _176 = _174 + 16;
+nbody.c:153:7: note: add new stmt: MEM[(struct particle_s *)_176] = vect_cst__164;
+nbody.c:153:7: note: vectorizing stmts using SLP.
+nbody.c:153:7: optimized: basic block part vectorized using 16 byte vectors
+nbody.c:152:5: note: basic block vectorized
+nbody.c:24:5: missed: statement clobbers memory: __asm__ __volatile__("rdtsc" : "=a" a_114, "=d" d_115);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:107:10: missed: statement clobbers memory: __builtin_puts (&"-----------------------------------------------------"[0]);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:107:10: missed: statement clobbers memory: __printf_chk (1, "\x1b[1m%s %4s \x1b[42m%10.1lf +- %.1lf GFLOP/s\x1b[0m\n", "Average performance:", "", rate_77, drate_78);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:107:10: missed: statement clobbers memory: __printf_chk (1, "Average rdtsc = %lld\n", _40);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:107:10: missed: statement clobbers memory: __builtin_puts (&"-----------------------------------------------------"[0]);
+nbody.c:167:13: missed: statement clobbers memory: f_84 = fopen ("../averagePerf.dat", "a+");
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:100:10: missed: statement clobbers memory: __fprintf_chk (f_84, 1, "%lf %lf\n", rate_77, drate_78);
+nbody.c:171:3: missed: statement clobbers memory: fclose (f_84);
+nbody.c:174:3: missed: statement clobbers memory: free (_4);
+nbody.c:175:3: missed: statement clobbers memory: free (_6);
+nbody.c:176:3: missed: statement clobbers memory: free (_7);
+nbody.c:177:3: missed: statement clobbers memory: free (_8);
+nbody.c:178:3: missed: statement clobbers memory: free (_9);
+nbody.c:179:3: missed: statement clobbers memory: free (_10);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:107:10: missed: statement clobbers memory: __printf_chk (1, "%5llu %10.3e %10.3e %8.1f %s\n", i_149, _135, _141, _133, "*");
+nbody.c:146:5: missed: statement clobbers memory: fflush (stdout.4_45);

@@ -1,0 +1,298 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINING OPTION VALUES:
+  -inline-factor: 100
+  -inline-min-size: 30
+  -inline-max-size: 230
+  -inline-max-total-size: 2000
+  -inline-max-per-routine: 10000
+  -inline-max-per-compile: 500000
+
+
+Begin optimization report for: main(int, char **)
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (main(int, char **)) [1] nbody.c(96,1)
+  -> INLINE: (98,30) atoll(const char *)
+     {{ Inlining of routines from system headers is omitted. Use -qopt-report=3 to view full report. }}
+  -> INLINE: (112,3) init(particle_t *, u64)
+  -> INLINE: (127,7) move_particles(particle_t *, const f32, u64)
+  -> INLINE: (155,5) init(particle_t *, u64)
+  -> INLINE: (156,29) rdtsc(void)
+  -> INLINE: (158,7) move_particles(particle_t *, const f32, u64)
+  -> INLINE: (159,27) rdtsc(void)
+
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at nbody.c(31,3) inlined into nbody.c(112,3)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+   remark #15346: vector dependence: assumed OUTPUT dependence between call:rand(void) (34:21) and call:rand(void) (46:22)
+LOOP END
+
+LOOP BEGIN at nbody.c(122,3)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at nbody.c(57,3) inlined into nbody.c(127,7)
+      remark #25236: Loop with pragma of trip count = 16384 ignored for large value
+      remark #25461: Imperfect Loop Unroll-Jammed by 2   (pre-vector) 
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at nbody.c(64,7) inlined into nbody.c(127,7)
+         remark #15300: LOOP WAS VECTORIZED
+      LOOP END
+
+      LOOP BEGIN at nbody.c(64,7) inlined into nbody.c(127,7)
+      <Remainder loop for vectorization>
+         remark #15301: REMAINDER LOOP WAS VECTORIZED
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at nbody.c(57,3) inlined into nbody.c(127,7)
+   <Remainder>
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at nbody.c(64,7) inlined into nbody.c(127,7)
+         remark #15300: LOOP WAS VECTORIZED
+      LOOP END
+
+      LOOP BEGIN at nbody.c(64,7) inlined into nbody.c(127,7)
+      <Remainder loop for vectorization>
+         remark #15301: REMAINDER LOOP WAS VECTORIZED
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at nbody.c(86,3) inlined into nbody.c(127,7)
+      remark #15300: LOOP WAS VECTORIZED
+   LOOP END
+
+   LOOP BEGIN at nbody.c(86,3) inlined into nbody.c(127,7)
+   <Remainder loop for vectorization>
+      remark #15301: REMAINDER LOOP WAS VECTORIZED
+   LOOP END
+LOOP END
+
+LOOP BEGIN at nbody.c(31,3) inlined into nbody.c(155,5)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+   remark #15346: vector dependence: assumed OUTPUT dependence between call:rand(void) (34:21) and call:rand(void) (46:22)
+LOOP END
+
+LOOP BEGIN at nbody.c(157,16)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at nbody.c(57,3) inlined into nbody.c(158,7)
+      remark #25236: Loop with pragma of trip count = 16384 ignored for large value
+      remark #25461: Imperfect Loop Unroll-Jammed by 2   (pre-vector) 
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at nbody.c(64,7) inlined into nbody.c(158,7)
+         remark #15300: LOOP WAS VECTORIZED
+      LOOP END
+
+      LOOP BEGIN at nbody.c(64,7) inlined into nbody.c(158,7)
+      <Remainder loop for vectorization>
+         remark #15301: REMAINDER LOOP WAS VECTORIZED
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at nbody.c(57,3) inlined into nbody.c(158,7)
+   <Remainder>
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at nbody.c(64,7) inlined into nbody.c(158,7)
+         remark #15300: LOOP WAS VECTORIZED
+      LOOP END
+
+      LOOP BEGIN at nbody.c(64,7) inlined into nbody.c(158,7)
+      <Remainder loop for vectorization>
+         remark #15301: REMAINDER LOOP WAS VECTORIZED
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at nbody.c(86,3) inlined into nbody.c(158,7)
+      remark #15300: LOOP WAS VECTORIZED
+   LOOP END
+
+   LOOP BEGIN at nbody.c(86,3) inlined into nbody.c(158,7)
+   <Remainder loop for vectorization>
+      remark #15301: REMAINDER LOOP WAS VECTORIZED
+   LOOP END
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+nbody.c(96,1):remark #34051: REGISTER ALLOCATION : [main] nbody.c:96
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   63[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm31 k0-k7]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   54[ rax rdx rcx rbx rsi rdi r8-r15 zmm0-zmm31 k0-k7]
+        
+    Routine temporaries
+        Total         :    1443
+            Global    :     215
+            Local     :    1228
+        Regenerable   :     137
+        Spilled       :      28
+        
+    Routine stack
+        Variables     :      52 bytes*
+            Reads     :      14 [3.57e-01 ~ 0.4%]
+            Writes    :      14 [3.57e-01 ~ 0.4%]
+        Spills        :     224 bytes*
+            Reads     :      41 [1.66e-01 ~ 0.2%]
+            Writes    :      34 [1.28e-01 ~ 0.1%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: rdtsc(void)
+
+    Report from: Interprocedural optimizations [ipo]
+
+DEAD STATIC FUNCTION: (rdtsc(void)) nbody.c(22,1)
+
+===========================================================================
+
+Begin optimization report for: move_particles(particle_t *, const f32, u64)
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (move_particles(particle_t *, const f32, u64)) [4] nbody.c(52,1)
+
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at nbody.c(57,3)
+   remark #25461: Imperfect Loop Unroll-Jammed by 2   (pre-vector) 
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at nbody.c(64,7)
+      remark #15300: LOOP WAS VECTORIZED
+   LOOP END
+
+   LOOP BEGIN at nbody.c(64,7)
+   <Remainder loop for vectorization>
+      remark #15301: REMAINDER LOOP WAS VECTORIZED
+   LOOP END
+LOOP END
+
+LOOP BEGIN at nbody.c(57,3)
+<Remainder>
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at nbody.c(64,7)
+      remark #15300: LOOP WAS VECTORIZED
+   LOOP END
+
+   LOOP BEGIN at nbody.c(64,7)
+   <Remainder loop for vectorization>
+      remark #15301: REMAINDER LOOP WAS VECTORIZED
+   LOOP END
+LOOP END
+
+LOOP BEGIN at nbody.c(86,3)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+   remark #15346: vector dependence: assumed OUTPUT dependence between (p+i*24)[_2] (88:7) and (p+i*24)[_2] (88:7)
+
+   LOOP BEGIN at nbody.c(88,7)
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+      remark #15346: vector dependence: assumed FLOW dependence between (p+i*24)[_2] (88:7) and *(p+i*24+_2*4+12) (88:7)
+      remark #25436: completely unrolled by 3  
+   LOOP END
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+nbody.c(52,1):remark #34051: REGISTER ALLOCATION : [move_particles] nbody.c:52
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   63[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm31 k0-k7]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   48[ rax rdx rcx rsi rdi r8-r11 zmm0-zmm31 k0-k6]
+        
+    Routine temporaries
+        Total         :     537
+            Global    :      64
+            Local     :     473
+        Regenerable   :      26
+        Spilled       :       0
+        
+    Routine stack
+        Variables     :      24 bytes*
+            Reads     :       6 [3.93e-01 ~ 0.4%]
+            Writes    :       6 [3.93e-01 ~ 0.4%]
+        Spills        :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: init(particle_t *, u64)
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (init(particle_t *, u64)) [5] nbody.c(30,1)
+
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at nbody.c(31,3)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+   remark #15346: vector dependence: assumed OUTPUT dependence between call:rand(void) (34:21) and call:rand(void) (46:22)
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+nbody.c(30,1):remark #34051: REGISTER ALLOCATION : [init] nbody.c:30
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   63[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm31 k0-k7]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   14[ rax rdx rcx rbx rsi rdi r12-r15 zmm0-zmm3]
+        
+    Routine temporaries
+        Total         :      46
+            Global    :      30
+            Local     :      16
+        Regenerable   :       3
+        Spilled       :       7
+        
+    Routine stack
+        Variables     :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+        Spills        :      56 bytes*
+            Reads     :       8 [6.40e+00 ~ 6.4%]
+            Writes    :       7 [4.76e+00 ~ 4.8%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
